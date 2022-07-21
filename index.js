@@ -2,8 +2,13 @@ const express = require("express");
 const { MongoClient, ObjectId } = require("mongodb");
 
 // const url = "mongodb://localhost:27017";
-const url = "mongodb+srv://admin:jpf2g2sL5fhGx9Tw@cluster0.2ttaijg.mongodb.net"
-const dbName = "ocean_bancodados_19_07_2022";
+const usr = process.env.DB_USER
+const pwd = process.env.DB_PASSWORD
+const pwd = process.env.DB_NAME
+const url = `mongodb+srv://${usr}:${pwd}@cluster0.2ttaijg.mongodb.net`;
+// const dbName = "ocean_bancodados_19_07_2022";
+const dbName = process.env.DB_NAME;
+
 
 async function main() {
   

@@ -105,7 +105,7 @@ async function main() {
   });
 
 
-  app.listen(process.env.PORT || 3000, function () {
+  app.listen( process.env.PORT || 3000, function () {
     console.log("Aplicação rodando em http://localhost:3000");
   });
 }
